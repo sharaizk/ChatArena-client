@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+.loginmainContainer {
+  height: 100vh;
+  width: 100%;
+  background: url('../../resources/loginBg.svg')  rgb(242, 239, 239);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center, center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-blend-mode: multiply;
+}
+.section-container {
+  width: 50%;
+}
+.formContainer {
+  background: #ffff;
+  border-radius: 10px 0px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:stretch;
+  padding: 50px;
+}
+
+.formheader{
+  font-size: 20px;
+  text-transform:uppercase;
+  font-family: 'Nunito Sans', sans-serif;
+  padding-bottom: 10px;
+}
+
+.infoContainer {
+  background: #ff4343;
+  border-radius: 0px 10px 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'NunitoSans',sans-serif;
+  color: #ffff;
+}
+.login-side-image{
+  width: 75%;
+}
+@media (max-width: 768px) {
+  .mainContainer {
+    background-size: cover;
+    background-position: center, top;
+  }
+  .infoContainer {
+    display: none;
+  }
+  .section-container {
+    width: 90%;
+  }
+  .formContainer {
+    border-radius: 10px 10px 10px 10px;
+  }
+  
+}

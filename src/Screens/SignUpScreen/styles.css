@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+.signmainContainer {
+  height: 100vh;
+  width: 100%;
+  background: url('../../resources/loginBg.svg')  rgb(242, 239, 239);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center, center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-blend-mode: multiply;
+}
+.signformheader{
+  font-size: 20px;
+  text-transform:uppercase;
+  font-family: 'NunitoSans', sans-serif;
+
+  text-align: center;
+}
+.signformContainer {
+  background: #ffff;
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:stretch;
+  padding: 50px;
+  width: 800px
+}
+.date-picker{
+  width: 100%;
+}
+.signUpBtn{
+  border-radius: 3px;
+  background-color: #25182e;
+  color: #ffbe00;
+  border: none;
+}
+.signUpBtn:hover{
+  color: #25182e;
+  background-color: #ffbe00;
+}
+.signUpBtn:focus{
+  color: #25182e;
+  background-color: #ffbe00;
+}
+.toLoginPage{
+  color: gray;
+}
+.toLoginPage:hover{
+  color: inherit;
+}
+.ant-form-item-label>label.ant-form-item-required::before{
+  content: none;
+}
+@media (max-width:768px) {
+  .signformContainer{
+    width: 80%;
+  }
+  .signForm{
+    height: 500px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+@media (max-width:360px) {
+  .signformContainer{
+    width: 90%;
+    height: 90%;
+  }
+  .signForm{
+    height: 350px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}

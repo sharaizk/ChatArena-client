@@ -1,0 +1,31 @@
+.search-by-label{
+    font-family: 'ranade';    
+    text-align: center;
+    width: 100%;
+}
+
+.inrequest-container{
+    display: inline-block;
+    height: 100px;
+    max-height: 100px;
+    overflow-y: scroll;
+    width: 100%;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    white-space: nowrap;
+}
+.inrequest-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+.req-name-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.accept-btn-container{
+    width: fit-content;
+}
+.req-div{
+    overflow-y: scroll;
+}

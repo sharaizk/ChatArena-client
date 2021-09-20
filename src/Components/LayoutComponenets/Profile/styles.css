@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap");
+.profile-container{
+    position: relative;
+    background: #ffff;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.about-container{
+    width: auto;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    white-space: nowrap;
+}
+
+.about-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+.profile-head{
+    font-size: 16px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+}
+.default-about{
+    font-family: 'bespoke-sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.04em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.personal-info-container{
+    border: 1px solid #c4c4c4;
+    margin-top: 10px;
+    width: 100%;
+    padding:0px 20px 20px 20px;
+    border-radius: 10px;
+}
+.card-top {
+    position: absolute;
+    margin: auto;
+    border-radius: 10px 10px 0px 0px;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: #1A3365;
+  }
+
+
+.ant-spin{
+    color: #FF4343;
+    justify-content: center;
+    align-items: center;
+}
+  

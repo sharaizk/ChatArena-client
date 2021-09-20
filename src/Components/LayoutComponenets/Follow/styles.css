@@ -1,0 +1,19 @@
+.follow-tab-container {
+  background: #ffff;
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  border-radius: 10px;
+  
+}
+.ant-tabs-ink-bar {
+  height: 5px;
+  background: #25182e !important;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #25182e !important;
+  font-weight: 500;
+}

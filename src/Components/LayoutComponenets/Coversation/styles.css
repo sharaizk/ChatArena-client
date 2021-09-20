@@ -1,0 +1,72 @@
+.conversation-container{
+    height: 80%;
+    width: 100%;
+    background: #FFFF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.chat-section{
+    flex:0.9;
+    width:100%
+}
+.input-section{
+    flex: 0.1;
+    width: 100%;
+}
+.react-emoji{
+    flex-direction: row-reverse;
+}
+.react-emoji-picker--wrapper{
+    right:10
+}
+.input-field-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.enter-button{
+    color:#42ba96;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 48px;
+    font-weight: bolder;
+}
+.enter-button:hover{
+    filter: saturate(190%);
+}
+.chat-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items:stretch;
+    padding-bottom: 10px;
+}
+.myMessage{
+    text-align: left;
+    width: 45%;
+    padding: 5px;
+    border-radius:0px 45px 45px 0px;
+    word-wrap: break-word;
+    background-color: #c7c7c7;
+}
+.otherMessage{
+    text-align:right;
+    float: right;
+    width: 45%;
+    padding: 5px;
+    border-radius:0px 45px 45px 0px;
+    word-wrap: break-word;
+    background-color: #00D38F;
+}

@@ -1,0 +1,37 @@
+.searched-user-container{
+    display: inline-block;
+    max-height:200px;
+    overflow-y: scroll;
+    width: 100%;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    white-space: nowrap;
+}
+.searched-user-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+.searched-avatar{
+    height:100%;
+    min-width: 50px;
+    width: 100%;
+    max-width: 75px;
+}
+.usernotfound-animation{
+    width: 100px;
+}
+.add-btn{
+    width: 75px;
+    font-size: 10px;
+    padding: 0;
+    background-color: #1A3365;
+    border-color: #1A3365;
+}
+.add-btn:hover{
+    border-color: #FFBB00 ;
+    background-color:#FFFF;
+    color: #1A3365;
+}
+.add-btn:focus{
+    background-color: #1A3365;
+    color: white;
+}

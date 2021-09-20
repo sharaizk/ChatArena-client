@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+.activeContainer {
+  background: #ffff;
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  border-radius: 10px;
+}
+.online-friends{
+  font-size: 16px;
+  font-family: 'NunitoSans',sans-serif;
+}
+.friend-container{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin-left: 20%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.friend-container::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+.info-container{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content:space-around;
+  align-items: center;
+  padding-bottom: 2px;
+}
+.nofriendonline-animation{
+  height: 150px;
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+.errorContainer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../../resources/loginBg.svg')  rgb(242, 239, 239);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
+}
+.errorImage{
+height: 25%;
+}
+.notImage{
+    height: 50%;
+}
+.errorLabel{
+    font-size: 25px;
+    font-family: 'Nunito Sans';
+    color: #565656;
+}
+.pagenotfound-animation{
+    width: 42.5758382118148vw;
+    min-width: 400px;
+}

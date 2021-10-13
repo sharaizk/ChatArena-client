@@ -1,42 +1,36 @@
 import React from "react";
 import "./styles.css";
-import { Avatar, Typography, Button } from "antd";
+import { Avatar, Typography } from "antd";
 import { motion } from "framer-motion";
 import {
   searchedUserVariant,
   searchUserChildren,
 } from "../../../../Transitions";
 import {connect} from 'react-redux'
-import server from "../../../../api/server";
+import AcceptRequest from "./AcceptRequest";
 const RenderRequests = ({ requests,currentUserId }) => {
 
-  const onClick=async (senderId)=>{
-    try {
-      await server.patch('/api/user/acceptrequest',{sender:senderId,receiver:currentUserId})
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
   const Request = () => {
-   return requests.map((request) => {
+   return requests.map((request,index) => {
+     
       const { _id, name, username, profilepic } = request.senderInfo;
       return (
         <motion.div
           variants={searchedUserVariant}
           initial="visible"
-          key={_id}
-          className="req-div row d-flex justify-content-spacebetween align-items-center pb-2"
+          key={username}
+          className="req-div row align-items-center justify-content-center w-100  pb-2"
         >
-          <motion.div variants={searchUserChildren} initial="hidden" animate="visible" className="col-12 col-sm-3 col-lg-12 col-xl-3">
-            <Avatar className="searched-avatar" src={profilepic} />
+          <motion.div variants={searchUserChildren} initial="hidden" animate="visible" className="col-12 col-sm-3 col-md-4 col-lg-12 col-xl-3">
+            <Avatar size={{ xs: 50, sm: 50, md: 60, lg: 60, xl: 50, xxl: 50 }} src={profilepic} />
           </motion.div>
-          <motion.div variants={searchUserChildren} initial="hidden" animate="visible"  className="req-name-container col-12 col-sm-3 col-lg-12 col-xl-4">
+          <motion.div variants={searchUserChildren} initial="hidden" animate="visible"  className="req-name-container col-12 col-sm-3 col-md-4 col-lg-12 col-xl-5">
           <Typography.Text>{name}</Typography.Text>
           <Typography.Text style={{fontSize:14}} type="secondary">{username}</Typography.Text>
           </motion.div>
-          <motion.div variants={searchUserChildren} initial="hidden" animate="visible"  className="accept-btn-container col-12 col-sm-6 col-lg-12 col-xl-5">
-           <Button type="primary" onClick={()=>onClick(_id)} className="add-btn">Accept</Button>
+          <motion.div variants={searchUserChildren} initial="hidden" animate="visible"  className=" col-12 col-sm-3 col-md-4 col-lg-12 col-xl-4">
+           <AcceptRequest index={index} senderId={_id} currentUserId={currentUserId}/>
           </motion.div>
         </motion.div>
       );
@@ -50,10 +44,13 @@ const RenderRequests = ({ requests,currentUserId }) => {
   );
 };
 
+
+
 const mapStateToProps=(state)=>{
   return{
     currentUserId: state.auth.userId
   }
 }
+
 
 export default connect(mapStateToProps, null)(RenderRequests);

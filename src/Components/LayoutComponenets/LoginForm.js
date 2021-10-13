@@ -2,8 +2,9 @@ import React from "react";
 import { Form, Button, Input, notification } from "antd";
 import { Divider } from "antd";
 import { Link } from "react-router-dom";
-const LoginForm = ({ onSignIn }) => {
+const LoginForm = ({ onSignIn,isLoading }) => {
   const [form] = Form.useForm();
+
   const onFinish = (values) => {
     onSignIn(values);
     form.resetFields();
@@ -71,7 +72,7 @@ const LoginForm = ({ onSignIn }) => {
         <Button type="text">Forgot Password</Button>
         <Divider />
         <Form.Item>
-          <Button type="primary" className="signUpBtn" style={{ marginRight: 20 }} htmlType="submit">
+          <Button type="primary" loading={isLoading} className="signUpBtn" style={{ marginRight: 20 }} htmlType="submit">
             Log In
           </Button>
           <Link style={{color:'#25182e'}} to="/register">Sign Up</Link>

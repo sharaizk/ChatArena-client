@@ -12,7 +12,7 @@ import ImgCrop from 'antd-img-crop';
 import "./styles.css";
 import { countrylist } from "../../helpers/data.helper";
 import { InboxOutlined } from "@ant-design/icons";
-const SignUpForm = ({ onSignUp }) => {
+const SignUpForm = ({ onSignUp,isLoading }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const { Dragger } = Upload;
   const { Option } = Select;
@@ -227,7 +227,7 @@ const SignUpForm = ({ onSignUp }) => {
                 </ImgCrop>
               </Form.Item>
               <Form.Item>
-                <Button type="primary" className="signUpBtn" htmlType="submit">
+                <Button loading={isLoading} type="primary" className="signUpBtn" htmlType="submit">
                   Submit
                 </Button>
               </Form.Item>

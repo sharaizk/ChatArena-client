@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { motion } from "framer-motion";
 import { pageTransition, pageVariants } from "../../Transitions";
 import { Link } from "react-router-dom";
@@ -10,6 +10,8 @@ import { signUp } from "../../redux/actions";
 import history from "../../history/history";
 
 const SignUpScreen = ({signUp}) => {
+
+  const [isLoading,setLoading] = useState(false)
 
   const errorNotification = (res) =>{
     notification['error']({
@@ -29,7 +31,9 @@ const SignUpScreen = ({signUp}) => {
     })
   }
   const onSignUp = async (values,profileImage) =>{
+      setLoading(true)
       const res= await signUp(values,profileImage)
+      setLoading(false)
       if(res){
         errorNotification(res)
       }
@@ -54,7 +58,7 @@ const SignUpScreen = ({signUp}) => {
         <h4 className="signformheader">Welcome to Chat App</h4>
         <Divider />
 
-        <SignUpForm onSignUp={onSignUp}/>
+        <SignUpForm onSignUp={onSignUp} isLoading={isLoading}/>
 
         <Divider />
         <div className="d-flex justify-content-center align-items-center">

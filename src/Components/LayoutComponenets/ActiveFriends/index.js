@@ -52,8 +52,8 @@ const ActiveFriends = ({ socket, friends }) => {
             animationData={NoOnline}
             play
             className="nofriendonline-animation"
-          />
-          <label>Waiting for friends to come online</label>
+          ></Lottie>
+          <label className="pb-lg-5 pb-xl-0">Waiting for friends to come online</label>
         </>
       )}
     </div>

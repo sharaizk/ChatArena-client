@@ -38,15 +38,15 @@ const Friends = ({ friendList, userId, getRequests, getFriendList,socket }) => {
             variants={searchUserChildren}
             initial="hidden"
             animate="visible"
-            className="col-12 col-sm-3 col-lg-12 col-xl-6"
+            className="col-4 col-sm-3 col-xl-5 col-xxl-4"
           >
-            <Avatar size={80} src={<Image src={friend.profilepic} />} />
+            <Avatar size={{ xs: 70, sm: 70, md: 70, lg: 70, xl: 70, xxl: 80 }} src={<Image src={friend.profilepic} />} />
           </motion.div>
           <motion.div
             variants={searchUserChildren}
             initial="hidden"
             animate="visible"
-            className="d-flex flex-column col-12 col-sm-5 col-lg-12 col-xl-6"
+            className="d-flex flex-column col-4 col-sm-5 col-lg-12 col-xl-6"
           >
             <Typography.Text>{friend.name}</Typography.Text>
             <Typography.Text style={{ fontSize: 14 }} type="secondary">

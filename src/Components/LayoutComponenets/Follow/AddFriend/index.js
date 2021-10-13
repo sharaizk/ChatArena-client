@@ -35,8 +35,7 @@ const AddFriend = ({setNoti, socket}) => {
         <UserList users={searchedusers} />
       ) : (
         <>
-          <label className="search-by-label">Search By Username</label>
-          <Divider>Incomming Requests</Divider>
+          <Divider style={{'fontSize':'1.6859852476290833vh'}}>Incomming Requests</Divider>
           <InRequests setNoti={setNoti} socket={socket}/>
         </>
       )}

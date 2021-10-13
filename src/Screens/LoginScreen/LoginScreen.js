@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import "./styles.css";
 import LoginForm from "../../Components/LayoutComponenets/LoginForm";
 import Lottie from "react-lottie-player";
@@ -13,6 +13,7 @@ const LoginScreen = ({ signIn, checkToken }) => {
   useEffect(() => {
     checkToken();
   }, [checkToken]);
+  const [isLoading,setLoading] = useState(false)
 
   const errorNotification = (res) => {
     notification["error"]({
@@ -33,7 +34,9 @@ const LoginScreen = ({ signIn, checkToken }) => {
   };
 
   const onSignIn = async (values) => {
+    setLoading(true)
     const res = await signIn(values);
+    setLoading(false)
     if (res) {
       errorNotification(res);
     } else {
@@ -53,7 +56,7 @@ const LoginScreen = ({ signIn, checkToken }) => {
       <div className="section-container row">
         <div className="col-12 col-md-7 formContainer">
           <h4 className="formheader">Please Login</h4>
-          <LoginForm onSignIn={onSignIn} />
+          <LoginForm onSignIn={onSignIn} isLoading={isLoading}/>
         </div>
         <div className="col-12 col-md-5 infoContainer">
           <Lottie

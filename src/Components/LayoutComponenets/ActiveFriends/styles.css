@@ -35,5 +35,8 @@
   padding-bottom: 2px;
 }
 .nofriendonline-animation{
-  height: 150px;
+  height: 14vh;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
 }

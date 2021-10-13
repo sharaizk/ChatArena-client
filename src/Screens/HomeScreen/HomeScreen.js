@@ -16,7 +16,7 @@ const MemoHomeScreen = ({ checkToken, userId }) => {
 
   useEffect(()=>{
     if(userId){
-      setSocket(io('http://localhost:5000'))
+      setSocket(io('https://chatarena-server.herokuapp.com'))
     }
   },[userId])
  
